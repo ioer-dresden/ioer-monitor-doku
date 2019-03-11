@@ -4,17 +4,14 @@ title: Legende
 parent: Kartenansicht
 grand_parent: Frontend
 ---
+# Legende
+Dieses Element stellt alle relevanten Informationen zu dem von Nutzer gewählten Indikator bereit. Über den Datenalter Button kann sich der Nutzer das Datenalter als Karte darstellen lassen.
+Das Objekt wird über **_legende_** aufgerufen.
+
+## Funktionen
 
 ![Legende]({{site.baseurl}}/assets/images/uml_legende.png)
 
-# Beschreibung
-
-![Legende]({{site.baseurl}}/assets/images/legende.png)  
-
-Dieses Element stellt alle relevanten Informationen zu dem von Nutzer gewählten Indikator bereit. Über den Datenalter Button kann sich der Nutzer das Datenalter als Karte darstellen lassen.
-Das Objekt wird über **legende** aufgerufen.
-
-# Funktionen
 
 |  Funktion |  Paramter | Beschreibung |
 |:-------------|:-----------|:-----------|
