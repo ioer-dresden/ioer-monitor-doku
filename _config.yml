@@ -25,7 +25,7 @@ search_enabled: true
 
 aux_links:
   "IÖR-Monitor auf GitHub":
-    - "//github.com//LorenMucha/IOER-Monitor"
+    - "//github.com//ioer-dresden/ioer-monitor"
 
 # Build settings
 markdown: kramdown
