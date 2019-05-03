@@ -1,9 +1,9 @@
 ---
 layout: default
 title: URL Paramter
-nav_order: 3
 has_children: false
 permalink: /docs/frontend/url_paramter
+parent: Frontend
 ---
 # URL Paramter
 
