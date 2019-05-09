@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Stat
+title: Statistik
 parent: Dialog
 grand_parent: Frontend
 ---
 # Statistik
 
-Dieses 
+Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regionen.
