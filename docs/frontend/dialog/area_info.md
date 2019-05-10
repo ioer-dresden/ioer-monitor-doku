@@ -13,7 +13,7 @@ Dieses Modul zeigt alle verfügbaren Indiikatorenwerte von ausgewähltem Region 
 Zum Vergleich werden auch die Werte von Übergeordneten Regionen dargestellt.
 Alle Dverfügbaren Daten von einem Region können heruntergeladen werden.
 
-![Image]({{site.baseurl}}/assets/images/area_info.png)
+![Image]({{site.baseurl}}/assets/images/area_info.png )
 
 
 ## Variablen
