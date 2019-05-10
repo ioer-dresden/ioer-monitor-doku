@@ -25,20 +25,20 @@ Alle Dverfügbaren Daten von einem Region können heruntergeladen werden.
 | **data** | array | false | Alle Indikator-relevanten Werte: aus *RequestManager.getSpatialOverview(indikatorauswahl.getSelectedIndikator(),ags)* |
 | **lan** | String | false | Sprachwahl des Nutzers |
 | **time** | number | 0 | Zeitschnittwahl des Nutzers |
-| **columnList** | array[String] | ["category","indicator", "value", "relevanceYear","defaultComparisonValue", "defaultDifference"] | Die Spaltennamen für die Tabellenspalten |
+| **columnList** | String[] | ["category","indicator", "value", "relevanceYear","defaultComparisonValue", "defaultDifference"] | Die Spaltennamen für die Tabellenspalten |
 | **text** | Object{Object} | Object{Object} | Sprachen- lokalisierung. Jedes untergeordnetes Objekt beinhaltet die Übersetzungen in die jeweilige Sprache  |
 
 ## Funktionen
 
 | Funktion |  Parameter | Return | Beschreibung |
 |-------------| -----------| -----------|-----------|
-| ** open ** | ags (String) , gen (String) | void | Die 'main' Funktion vom Modul. Aufgerufen von indikator_json.setPopUp(). Ruft die notwendigen Daten vom Backend auf. Eingabeparameter: AGS = amtlischer Gemeindeschlüssel; gen= Name vom Gebiet |
-| ** getAllParameters ** | ags, gen | Object | Setzt alle für das Modul notwendigen Parametern (außer die JSON Indikator-Daten von Backend) |
-| ** extractRelevantDataFromJSON ** | data (JSON Object), lan (String) | array[Object] | Bereitet den vom Backend erhaltenen JSON auf. Die relevanten Werte für jeden Indikator werden in einem Objekt geschrieben. Ein Array von diesen Indikator-Objekten bildet die Grundlage für den tabellarischen Darstellung  |
-| ** selectColumnsForTable ** | data, columnList | array[][String] | TODO |
-| ** initDropdown ** | Parameter | Return | Beschreibung |
-| ** Name ** | Parameter | Return | Beschreibung |
-| ** Name ** | Parameter | Return | Beschreibung |
-| ** Name ** | Parameter | Return | Beschreibung |
-| ** Name ** | Parameter | Return | Beschreibung |
-| ** Name ** | Parameter | Return | Beschreibung |
+| **open** | ags (String) , gen (String) | void | Die 'main' Funktion vom Modul. Aufgerufen von indikator_json.setPopUp(). Ruft die notwendigen Daten vom Backend auf. Eingabeparameter: AGS = amtlischer Gemeindeschlüssel; gen= Name vom Gebiet |
+| **getAllParameters** | ags, gen | Object | Setzt alle für das Modul notwendigen Parametern (außer die JSON Indikator-Daten von Backend) |
+| **extractRelevantDataFromJSON** | data (JSON Object), lan (String) | Object[] | Bereitet den vom Backend erhaltenen JSON auf. Die relevanten Werte für jeden Indikator werden in einem Objekt geschrieben. Ein Array von diesen Indikator-Objekten bildet die Grundlage für den tabellarischen Darstellung  |
+| **selectColumnsForTable** | data (Object[]), columnList (String[]) | String[][] | Selektiert die für Tabelle notwendigen Spalten aus Gesamtdaten |
+| **initDropdown** | parameters (Object) | void | Setzt die Funktionalität von Dropdown für den VErgleichsgebietsauswahl |
+| **writeHTML** | parameters (Object), text (Object{Object}) | HTML Element(s) | Setzt die HTML Elemente für das Dialogfenster |
+| **createDialogWindow** | parameters(Object), text (Object{Object}), html (HTML Element(s)) | void | Initialisiert den Dialogfenster |
+| **drawTable** | parameters(Object) | void | Zeichnet und formattiert die Table. Nutzt den [DataTables](https://datatables.net/) Library ) |
+| **getDataTablesLanguage** | lan (String) | Object | Liefert ein Sprach-objekt für die Lokalisierung von [DataTables](https://datatables.net/) User-Interface  |
+| **roundNumber** | indicatorId (String), number (Number) | Float | Rundet einen Indikatorwert. Rundung erfolgt auf basis von vom Backend erhaltenen Dezimalstellen-Regeln  |
