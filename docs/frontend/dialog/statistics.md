@@ -16,37 +16,36 @@ Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regione
 ![Image]({{site.baseurl}}/assets/images/statistik_verteilung.png "Kumulative Verteilung")
 
 
-#### Variablen
+## Variablen
 | Name | Type | Default | Info |
 |------|----------|------|-----|
 | **endpoint_id** | String | "area_info_content" | Identifikator für diesen Dialogfenster |
 | **selector_toolbar** | String | "#ind_stat" | Identifikator von Toolbar-ikone |
-
 | **text** | Object{Object} | Object{Object} | Sprachen- lokalisierung. Jedes untergeordnetes Objekt beinhaltet die Übersetzungen in die jeweilige Sprache  |
 
 ## Funktionen
 
 | Funktion |  Parameter | Return | Beschreibung |
 |-------------| -----------| -----------|-----------|
-| **init** |  | void |  |
-| **open** |  | void |  |
-| **populateChartSettingsWithValues** |  | void |  |
-| **getAllValues** | geoJSON | void |  |
-| **getCurrentValue** | geoJSON, ags | void |  |
-| **getAreaCount** | geoJSON | void |  |
-| **parseStringPointToComma** |  | void |  |
-| **calculateStatistics** |  | void |  |
-| **calculateAverage** |  | void |  |
-| **calculateMedian** |  | void |  |
-| **calculateStDeviation** |  | void |  |
-| **getDecimalSpaces** |  | void |  |
-| **roundNumber** |  | void |  |
-| **sortObjectAscending** |  | void |  |
-| **getOnlyValues** |  | void |  |
-| **getDistributionFunctionValues** |  | void |  |
-| **getDeviationValues** |  | void |  |
-| **getDensityFunctionIntervalValues** |  | void |  |
-| **findSelectedAreaInInterval* |  | void |  |
+| **init** |  | void | deaktiviert das Element für den Raster Raumgliederung |
+| **open** |  | void | Schreibt alle nötigen Parametern, setzt den HTLM für das Modul und öffnet den Dialogfenster |
+| **populateChartSettingsWithValues** |  | void | Holt alle nötigen Werte vom Backend und schreibt die in *Chart* Objekt |
+| **getAllValues** | geoJSON | Object[] | Extrahiert die nötigen Einträge aus GeoJSON |
+| **getCurrentValue** | geoJSON, ags (String)| Number | Holt den Wert für den ausgewählen Gebiet |
+| **getAreaCount** | geoJSON | Number | Zahlt die Gebiete, die den jeweiligen Indikator haben |
+| **parseStringPointToComma** | Number | String | Transformiert den Dezimaltrennzeichen |
+| **calculateStatistics** | values (Number[]), decimal (Number) | Object | Berechnet alle Statistiken |
+| **calculateAverage** | values (Number[]) | Number | Berechnet den Mittelwert |
+| **calculateMedian** | values (Number[])| Number | Berechnet den Median |
+| **calculateStDeviation** | values (Number[]), average (Number) | Number | Berechnet Standardabweichung |
+| **getDecimalSpaces** |  | Number | Holt die Anzahl der Dezimalstellen |
+| **roundNumber** | Number, decimal (Number) | Number | Runder einen Zahl |
+| **sortObjectAscending** | objectArray (Object[]), key1 (String), key2 (String) | Object[] | Sortiert den Array aufsteigend |
+| **getOnlyValues** | objectArray (Object[]) | Number[] | Holt nur die Numerischen Werte aus Data |
+| **getDistributionFunctionValues** | sortedObjectArray | Object[] | Liefert die Werte für die Verteilungsfunktion |
+| **getDeviationValues** | objectArray (Object[]), mean (Number) | Object[] | Liefert die Werte für die Abweichungen vom Mittelwert |
+| **getDensityFunctionIntervalValues** | data (Object[]) ,intervalCount (Number),decimal (Number) | Object[] | Ermittelt die Intervalenparametern für die Dichtefunktion |
+| **findSelectedAreaInInterval** | intervalArray (Object[]), selectedAgs (String) | Object | Sucht in allen Intervalen nach einem bestimmten Gebiet |
 
 
 ## Objekte
@@ -55,7 +54,7 @@ Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regione
 
  Dieses **Objekt** beinhaltet die wichtigsten Variablen und steuert die graphische Darstellung der Daten
  
- ####Varriablen
+ ####Variablen
  
 | Name | Type | Default | Info |
 |------|----------|------|-----|
@@ -85,4 +84,15 @@ Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regione
   
   #####Controller
   
-  DiesesObjekt 
+  DiesesObjekt kontrolliert die Zeichnung von Grafiken und Menüs
+  
+  ######Funktionen
+  
+   | Funktion |  Parameter | Return | Beschreibung |
+   |-------------| -----------| -----------|-----------|
+    **setINteractiveElements** |  | void |  |
+    **showVisualisation** |  | void |  |
+    **drawOrderedValuesChart** |  | void |  |
+    **drawDensityFunctionChart** |  | void |  |
+    **drawCumulativeDistributionChart** |  | void |  |
+  
