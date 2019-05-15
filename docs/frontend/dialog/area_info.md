@@ -25,7 +25,7 @@ Alle Dverfügbaren Daten von einem Region können heruntergeladen werden.
 | **data** | array | false | Alle Indikator-relevanten Werte: aus *RequestManager.getSpatialOverview(indikatorauswahl.getSelectedIndikator(),ags)* |
 | **lan** | String | false | Sprachwahl des Nutzers |
 | **time** | number | 0 | Zeitschnittwahl des Nutzers |
-| **columnList** | String[] | ["category","indicator", "value", "relevanceYear","defaultComparisonValue", "defaultDifference"] | Die Spaltennamen für die Tabellenspalten |
+| **columnList** | String[] | ["category","indicator", "value","defaultComparisonValue"] | Die Spaltennamen für die Tabellenspalten |
 | **text** | Object{Object} | Object{Object} | Sprachen- lokalisierung. Jedes untergeordnetes Objekt beinhaltet die Übersetzungen in die jeweilige Sprache  |
 
 ## Funktionen
@@ -39,6 +39,6 @@ Alle Dverfügbaren Daten von einem Region können heruntergeladen werden.
 | **initDropdown** | parameters (Object) | void | Setzt die Funktionalität von Dropdown für den VErgleichsgebietsauswahl |
 | **writeHTML** | parameters (Object), text (Object{Object}) | HTML Element(s) | Setzt die HTML Elemente für das Dialogfenster |
 | **createDialogWindow** | parameters(Object), text (Object{Object}), html (HTML Element(s)) | void | Initialisiert den Dialogfenster |
-| **drawTable** | parameters(Object) | void | Zeichnet und formattiert die Table. Nutzt den [DataTables](https://datatables.net/) Library ) |
+| **drawTable** | parameters(Object) | void | Zeichnet und formattiert die Table. Nutzt die [DataTables](https://datatables.net/) Library ) |
 | **getDataTablesLanguage** | lan (String) | Object | Liefert ein Sprach-objekt für die Lokalisierung von [DataTables](https://datatables.net/) User-Interface  |
 | **roundNumber** | indicatorId (String), number (Number) | Float | Rundet einen Indikatorwert. Rundung erfolgt auf basis von vom Backend erhaltenen Dezimalstellen-Regeln  |
