@@ -45,7 +45,7 @@ Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regione
 | **getDistributionFunctionValues** | sortedObjectArray | Object[] | Liefert die Werte für die Verteilungsfunktion |
 | **getDeviationValues** | objectArray (Object[]), mean (Number) | Object[] | Liefert die Werte für die Abweichungen vom Mittelwert |
 | **getDensityFunctionIntervalValues** | data (Object[]) ,intervalCount (Number),decimal (Number) | Object[] | Ermittelt die Intervalenparametern für die Dichtefunktion |
-| **findSelectedAreaInInterval** | intervalArray (Object[]), selectedAgs (String) | Object | Sucht in allen Intervalen nach einem bestimmten Gebiet |
+| **findSelectedAreaInInterval** | intervalArray (Object[]), selectedAgs (String) | Object | Sucht in allen Intervalen (die für Dichtefunktion festgelegt worden sind) nach einem bestimmten Gebiet |
 
 
 ## Objekte
@@ -78,7 +78,7 @@ Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regione
  
  | Funktion |  Parameter | Return | Beschreibung |
  |-------------| -----------| -----------|-----------|
-  **init** |  | void |  |
+  **init** |  | void | setzt die Container-dimensionen für die Visualisierung, zeichnet die Visualisierung, setzt die Interaktiven Elemente |
   
   ####Objekte
   
@@ -90,9 +90,9 @@ Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regione
   
    | Funktion |  Parameter | Return | Beschreibung |
    |-------------| -----------| -----------|-----------|
-    **setINteractiveElements** |  | void |  |
-    **showVisualisation** |  | void |  |
-    **drawOrderedValuesChart** |  | void |  |
-    **drawDensityFunctionChart** |  | void |  |
-    **drawCumulativeDistributionChart** |  | void |  |
+    **setInteractiveElements** | svg (HTML element), chart_width (Number), chart_height (Number), margin (Number) | void | Setzt die Funktionalität von Dropdown Menü für die Visualisierungsauswahl |
+    **showVisualisation** | selection (String), svg (HTML element), chart_width (Number), chart_height (Number), margin (Number) | void | setzt die richtigen Parameter für die Visualisierungsmethoden. Visualisierungsmethodenwahl basiert auf DropDown Menü selection |
+    **drawOrderedValuesChart** | parameters (Object) | void | Zeichnet die Visualisierung: Werte aufsteigend als Balkendiagramm. Basiert aud 'D3' Visualisierungsbibliothek |
+    **drawDensityFunctionChart** | parameters (Object) | void | Zeichnet die Visualisierung: Dichtefunktion. Basiert aud 'D3' Visualisierungsbibliothek |
+    **drawCumulativeDistributionChart** | parameters (Object) | void | Zeichnet die Visualisierung: Kumulative Verteilung. Basiert aud 'D3' Visualisierungsbibliothek |
   
