@@ -17,6 +17,7 @@ Alle Dverfügbaren Daten von einem Region können heruntergeladen werden.
 
 
 ## Variablen
+
 | Name | Type | Default | Info |
 |------|----------|------|-----|
 | **endpoint_id** | String | "area_info_content" | Identifikator für diesen Dialogfenster |

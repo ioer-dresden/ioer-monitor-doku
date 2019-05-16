@@ -17,6 +17,7 @@ Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regione
 
 
 ## Variablen
+
 | Name | Type | Default | Info |
 |------|----------|------|-----|
 | **endpoint_id** | String | "area_info_content" | Identifikator für diesen Dialogfenster |
@@ -47,14 +48,13 @@ Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regione
 | **getDensityFunctionIntervalValues** | data (Object[]) ,intervalCount (Number),decimal (Number) | Object[] | Ermittelt die Intervalenparametern für die Dichtefunktion |
 | **findSelectedAreaInInterval** | intervalArray (Object[]), selectedAgs (String) | Object | Sucht in allen Intervalen (die für Dichtefunktion festgelegt worden sind) nach einem bestimmten Gebiet |
 
-
 ## Objekte
 
- ###Chart
+### Chart
 
- Dieses **Objekt** beinhaltet die wichtigsten Variablen und steuert die graphische Darstellung der Daten
+Dieses **Objekt** beinhaltet die wichtigsten Variablen und steuert die graphische Darstellung der Daten
  
- ####Variablen
+#### Variablen
  
 | Name | Type | Default | Info |
 |------|----------|------|-----|
@@ -74,25 +74,25 @@ Dieses Modul Visualisiert die Statistischen Kennzahlen von ausgewählten Regione
  | **selectedChart** | String | "valueChart" | Name/Bezeichnung der ausgewählten Visualisierung |
  | **statistics** | Object | false | Beinhaltet die statistischen Werte (min/max, median, Mittelwert, Standartabweichung) |
  
- ####Funktionen
- 
- | Funktion |  Parameter | Return | Beschreibung |
- |-------------| -----------| -----------|-----------|
-  **init** |  | void | setzt die Container-dimensionen für die Visualisierung, zeichnet die Visualisierung, setzt die Interaktiven Elemente |
+#### Funktionen
+
+| Funktion |  Parameter | Return | Beschreibung |
+|-------------| -----------| -----------|-----------|
+**init** |  | void | setzt die Container-dimensionen für die Visualisierung, zeichnet die Visualisierung, setzt die Interaktiven Elemente |
+
+#### Objekte
+
+##### Controller
+
+Dieses Objekt kontrolliert die Zeichnung von Grafiken und Menüs
+
+###### Funktionen
   
-  ####Objekte
-  
-  #####Controller
-  
-  DiesesObjekt kontrolliert die Zeichnung von Grafiken und Menüs
-  
-  ######Funktionen
-  
-   | Funktion |  Parameter | Return | Beschreibung |
-   |-------------| -----------| -----------|-----------|
-    **setInteractiveElements** | svg (HTML element), chart_width (Number), chart_height (Number), margin (Number) | void | Setzt die Funktionalität von Dropdown Menü für die Visualisierungsauswahl |
-    **showVisualisation** | selection (String), svg (HTML element), chart_width (Number), chart_height (Number), margin (Number) | void | setzt die richtigen Parameter für die Visualisierungsmethoden. Visualisierungsmethodenwahl basiert auf DropDown Menü selection |
-    **drawOrderedValuesChart** | parameters (Object) | void | Zeichnet die Visualisierung: Werte aufsteigend als Balkendiagramm. Basiert aud 'D3' Visualisierungsbibliothek |
-    **drawDensityFunctionChart** | parameters (Object) | void | Zeichnet die Visualisierung: Dichtefunktion. Basiert aud 'D3' Visualisierungsbibliothek |
-    **drawCumulativeDistributionChart** | parameters (Object) | void | Zeichnet die Visualisierung: Kumulative Verteilung. Basiert aud 'D3' Visualisierungsbibliothek |
+| Funktion |  Parameter | Return | Beschreibung |
+|-------------| -----------| -----------|-----------|
+**setInteractiveElements** | svg (HTML element), chart_width (Number), chart_height (Number), margin (Number) | void | Setzt die Funktionalität von Dropdown Menü für die Visualisierungsauswahl |
+**showVisualisation** | selection (String), svg (HTML element), chart_width (Number), chart_height (Number), margin (Number) | void | setzt die richtigen Parameter für die Visualisierungsmethoden. Visualisierungsmethodenwahl basiert auf DropDown Menü selection |
+**drawOrderedValuesChart** | parameters (Object) | void | Zeichnet die Visualisierung: Werte aufsteigend als Balkendiagramm. Basiert aud 'D3' Visualisierungsbibliothek |
+**drawDensityFunctionChart** | parameters (Object) | void | Zeichnet die Visualisierung: Dichtefunktion. Basiert aud 'D3' Visualisierungsbibliothek |
+**drawCumulativeDistributionChart** | parameters (Object) | void | Zeichnet die Visualisierung: Kumulative Verteilung. Basiert aud 'D3' Visualisierungsbibliothek |
   
