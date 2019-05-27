@@ -5,8 +5,7 @@ parent: Dialog
 grand_parent: Frontend
 ---
 
-# Area Info
-
+# Gebietsprofil
 
 ### Beschreibung
 Dieses Modul zeigt alle verfügbaren Indiikatorenwerte von ausgewähltem Region in einer tabellarischen Form.  
