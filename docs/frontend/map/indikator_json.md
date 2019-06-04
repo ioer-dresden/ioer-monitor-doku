@@ -21,3 +21,4 @@ Dieses **Objekt** stellt alle wichtigen Funktionen bereit, mit welchen die vom [
 | **getJSONLayer** | | Object:json_layer| gibt den Parameter **_json_layer_** zurück |
 | **getJSONFile** | | Object:json_file| gibt den Paramter **_json_file_** zurück |
 | **init** |String:raumgl, Callback:callback | | holt die GeoJSON vom [**Backend**]({{site.baseurl}}/docs/backend) über die Methode _getGeoJSON_ des [**RequestManagers**]({{site.baseurl}}/docs/frontend/request_manager). Während des Ladevorganges wird die [**Progressbar**]({{site.baseurl}}/docs/frontend/view/progressbar.html) eingeblendet. |
+//TODO

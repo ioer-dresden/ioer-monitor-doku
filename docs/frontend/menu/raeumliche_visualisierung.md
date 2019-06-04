@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Räumliche Analyseebene
+title: Räumliche Visualisierung
 parent: Menu
 grand_parent: Frontend
-permalink: /docs/frontend/menu/raeumliche_analyseebene
+permalink: /docs/frontend/menu/raeumliche_visualisierung
 ---
 
-# Räumliche Analyseebene
+# Räumliche Visualisierung

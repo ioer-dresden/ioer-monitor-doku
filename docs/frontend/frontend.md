@@ -7,3 +7,6 @@ permalink: /docs/frontend
 ---
 # Frontend
 In diesem Abschnitt werden alle Komponenten des Frontends dokumentiert.
+//TODO
+- Bibliotheken
+- Pfade
