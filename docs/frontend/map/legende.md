@@ -8,6 +8,18 @@ grand_parent: Frontend
 Dieses Element stellt alle relevanten Informationen zu dem von Nutzer gewählten Indikator bereit. Über den Datenalter Button kann sich der Nutzer das Datenalter als Karte darstellen lassen.
 Das Objekt wird über **_legende_** aufgerufen.
 
+## Beschreibung
+
+Alle Informationen, welche für die Legende benötigt werden können über das Objekt [**_indikatorauswahl_**]({{site.baseurl}}/docs/frontend/menu/indikatorauswahl.html) mit der Methode _getPossebilities()_ abgefragt werden. Somit ist keine Kommunikation mit dem Backend notwendig. Innerhalb der Legende werden somit alle Informationen geholt und eingesetzt.
+
+```javascript
+//get all informations of the selected indicator
+indicator_id = indikatorauswahl.getSelectedIndikator();
+info_cat = indikatorauswahl.getPossebilities()[indikatorauswahl.getSelectedIndikatorKategorie()];
+//get the 'dategrundlage' for example
+datengrundlage = info_json['indicators'][indicator_id][("datengrundlage"+language_tag())]
+``` 
+
 ## Funktionen
 
 ![Legende]({{site.baseurl}}/assets/images/uml_legende.png)
