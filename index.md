@@ -9,5 +9,3 @@ permalink: /
 
 In dieser Dokumentation wird die Implementierung des IÖR-Monitors dokumentiert. Der Monitor stellt dabei eine Weiterentwicklung der [**Masterarbeit**]({{site.baseurl}}/assets/data/ma.pdf){:target="_blank"} von _Loren Mucha_ dar, welche dei Konzeption und Implementierung thematisierte und realisierte.
 
-## Zurücksetzen der gesamten Anwendung
-//TODO
