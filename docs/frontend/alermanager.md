@@ -24,3 +24,4 @@ Nachfolgend sind seine Funktionen dokumentiert.
 |**alertNoIndicatorChosen**| void |  weißt den Nutzer darauf hin, das er für die Funktionalität erst einen Indikator wählen muss. |
 |**alertError**| String:error | weißt den Nutzer darauf hin das ein Fehler aufgetreten ist. Wurde ein Fehler mitgeliefert wird dieser auch angezeigt |
 |**alertNotInTimeShift**|void| weißt den Nutzer darauf hin das der gewählte Zeitschnitt nicht für das gewählte Jahr verfügbar ist. |
+|**alertNotinSpatialRange**|String:raumglTXT,String:selection| weißt den Nutzer darauf hin, das der Indikator in der gewählten räumlichen Gliederung nicht verfügbar ist. Über den Paramter _raumglTXT_ wird angegeben |
