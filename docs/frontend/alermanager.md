@@ -24,4 +24,7 @@ Nachfolgend sind seine Funktionen dokumentiert.
 |**alertNoIndicatorChosen**| void |  weißt den Nutzer darauf hin, das er für die Funktionalität erst einen Indikator wählen muss. |
 |**alertError**| String:error | weißt den Nutzer darauf hin das ein Fehler aufgetreten ist. Wurde ein Fehler mitgeliefert wird dieser auch angezeigt |
 |**alertNotInTimeShift**|void| weißt den Nutzer darauf hin das der gewählte Zeitschnitt nicht für das gewählte Jahr verfügbar ist. |
-|**alertNotinSpatialRange**|String:raumglTXT,String:selection| weißt den Nutzer darauf hin, das der Indikator in der gewählten räumlichen Gliederung nicht verfügbar ist. Über den Paramter _raumglTXT_ wird angegeben |
+|**alertNotinSpatialRange**|String:raumglTXT,String:selection| weißt den Nutzer darauf hin, das der Indikator in der gewählten räumlichen Gliederung nicht verfügbar ist. Über den Paramter _raumglTXT_ wird angegeben welche Raumglieder als verfügbar angezeigt werden soll und _selection_ ist die dazugehörige ID |
+|**alertNotAsRaster**|void|weißt den Nutzer darauf hin, das der gewählte Indikator nicht als Raster-Karte verfügbar ist |
+|**alertServerlast**| String:choice| weißt den Nutzer darauf hin, das seine Wahl (Paramter _choice_) sehr rechenintensiv ist und es zu Einbußen innerhalb der Performance kommen kann. Der Choice Paramter wird dann bei OK-Klick als Raumgliederung visualisiert. |
+|**alertIE**|void| weißt den Nutzer darauf hin, das der Internet-Explorer nicht unterstützt wird. | 
